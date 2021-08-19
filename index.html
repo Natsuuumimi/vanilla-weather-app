@@ -15,6 +15,7 @@
 	</head>
 	<body>
 		<div class="container">
+      <div class="WeatherApp">
 			<form action="">
 				<div class="row">
 					<div class="col-8">
@@ -36,11 +37,23 @@
 					</div>
 			</form>
           <div class="WeatherInfo">
-            <h1>Tokyo</h1>
+            <h1>Tokyo, Japan</h1>
             <div id="date"></div>
             <h4 id="status">Cloudy</h4>
-            <span class="temperature" id="temp">26</span>
-            <span class="unit">°C</span>
+            <div class="row">
+              <div class="col-6">
+                <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Sunny">
+                <span class="temperature" id="temp">26</span>
+                <span class="unit">°C | °F</span>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li>Precipitation : 0%</li>
+                  <li>Humidity 73%</li>
+                  <li>Wind : 2 km</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <h4>Forecast for next 5 days...</h4>
           <div class="WeatherForecast row">
@@ -51,6 +64,9 @@
             <div class="col"></div>
           </div>
 				</div>
+        </div>
+        <small>
+          <a href="https://github.com/Natsuuumimi/vanilla-weather-app" target="_blank"> Open-source code</a> by Natsumi </small>
 		</div>
 		<script src="src/app.js"></script>
 	</body>
