@@ -13,5 +13,9 @@ ul {
     padding: 0;
 }
 .temperature {
-    font-size: 35px;
+    font-size: 40px;
+}
+.unit {
+    position: relative;
+    top: -20px;
 }
