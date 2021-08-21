@@ -16,13 +16,16 @@
 	<body>
 		<div class="container">
       <div class="WeatherApp">
-			<form action="">
+			<form class="search-form">
 				<div class="row">
 					<div class="col-8">
 						<input
 							type="search"
 							placeholder="Type city.."
-							class="form-control search-input"
+              class="TypeCity"
+              id="city-input"
+              autofocus="on"
+              autocomplete="off"
 						/>
 					</div>
 					<div class="col-2 p-0">
@@ -33,11 +36,11 @@
 						/>
 					</div>
 					<div class="col-2">
-            <a href="" class="btn btn-primary">Current📍</a>
+            <a href="" class="btn btn-primary" id="b1">Current📍</a>
 					</div>
 			</form>
           <div class="WeatherInfo">
-            <h1>Tokyo, Japan</h1>
+            <h1 id="city">Tokyo, Japan</h1>
             <div id="date"></div>
             <h4 id="status">Cloudy</h4>
             <div class="row">
