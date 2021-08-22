@@ -1,24 +1,24 @@
-let now = new Date();
 
-let currentDate = document.querySelector("#date");
+//format time
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+   hours = ("0" + hours).slice(-2);
+  let minutes = date.getMinutes();
+  minutes = ("0" + minutes).slice(-2);
+  let days = [
+		"Sunday",
+		"Monday",
+		"Tuesday",
+		"Wednesday",
+		"Thursday",
+		"Friday",
+		"Saturday",
+	];
+	let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 
-let date = now.getDate();
-let hours = now.getHours();
-let minutes = now.getMinutes();
-minutes = ("0" + minutes).slice(-2);
-
-let days = [
-	"Sunday",
-	"Monday",
-	"Tuesday",
-	"Wednesday",
-	"Thursday",
-	"Friday",
-	"Saturday",
-];
-let day = days[now.getDay()];
-
-currentDate.innerHTML = `${day} ${hours}:${minutes}`;
+}
 
 //current city&temp
 function displayWeather(response) {
@@ -28,12 +28,15 @@ function displayWeather(response) {
 	let description = document.querySelector("#status");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date");
 	let currentCity = response.data.name;
+
 	temp.innerHTML = `${temperature}`;
 	cityElement.innerHTML = `${currentCity}`;
 	description.innerHTML = response.data.weather[0].main;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 //display the city & locationTemp
 function searchCity(city) {
