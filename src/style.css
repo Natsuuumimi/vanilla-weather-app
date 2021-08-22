@@ -1,9 +1,5 @@
-.WeatherApp {
-    max-width: 750px;
-    margin: 30px auto;
-    padding: 20px;
-    border: 2px solid #9ddcdc;
-    border-radius: 10px;
+h1 {
+    color: blueviolet;
 }
 li {
     list-style: none;
@@ -11,6 +7,13 @@ li {
 ul {
     margin: 0;
     padding: 0;
+}
+.WeatherApp {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid #9ddcdc;
+    border-radius: 10px;
 }
 .temperature {
     font-size: 40px;

@@ -26,10 +26,14 @@ function displayWeather(response) {
 	let temp = document.querySelector("#temp");
 	let temperature = Math.round(response.data.main.temp);
 	let description = document.querySelector("#status");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
 	let currentCity = response.data.name;
 	temp.innerHTML = `${temperature}`;
 	cityElement.innerHTML = `${currentCity}`;
 	description.innerHTML = response.data.weather[0].main;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 //display the city & locationTemp
 function searchCity(city) {
