@@ -1,5 +1,5 @@
 h1 {
-    color: blueviolet;
+    color: navy;
 }
 li {
     list-style: none;
@@ -14,9 +14,10 @@ ul {
     padding: 20px;
     border: 2px solid #9ddcdc;
     border-radius: 10px;
+    background: #9ddcdc;
 }
 .temperature {
-    font-size: 40px;
+    font-size: 45px;
 }
 .unit {
     position: relative;
@@ -24,4 +25,27 @@ ul {
 }
 .TypeCity{
     width: 100%;
+}
+.current {
+  color: #fff;
+  background-color: #e95280;
+  border-color: #e95280;
+  font-weight: 400;
+  line-height: 1.5;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+}
+.current:hover {
+  background-color: #df4c78;
+  border: 1px solid transparent;
+}
+.weathe-temperature .active {
+color: black;
+cursor: default;
+text-decoration: none;
+}
+.weathe-temperature .active:hover{
+  text-decoration: none;
 }
