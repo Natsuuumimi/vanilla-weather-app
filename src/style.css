@@ -8,6 +8,10 @@ ul {
     margin: 0;
     padding: 0;
 }
+small{
+  display: block;
+  text-align: center;
+}
 .WeatherApp {
     max-width: 750px;
     margin: 30px auto;
@@ -48,4 +52,14 @@ text-decoration: none;
 }
 .weathe-temperature .active:hover{
   text-decoration: none;
+}
+.col {
+  display: inline-block;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  border: 2px solid #e67a7a;
+  border-radius: 30px;
+  color: #d45079;
+  background: #cff0f0;
 }
