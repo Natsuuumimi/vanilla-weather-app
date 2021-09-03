@@ -43,7 +43,6 @@ small {
 }
 .current:hover {
 	background-color: #df4c78;
-	border: 1px solid transparent;
 }
 .weathe-temperature .active {
 	color: black;
