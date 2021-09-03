@@ -55,11 +55,24 @@ text-decoration: none;
 }
 .col {
   display: inline-block;
-  padding: 10px;
-  margin: 5px;
+  padding: 5px;
+  margin: 3px;
   text-align: center;
   border: 2px solid #e67a7a;
-  border-radius: 30px;
+  border-radius: 25px;
   color: #d45079;
   background: #cff0f0;
+}
+.temperature2 {
+  font-size: 14px;
+}
+.forecast-max{
+  color: #f5064e;
+}
+.forecast-min {
+  color: rgb(46, 62, 114);
+}
+.weather-forecast-date {
+ font-size: 16px;
+ font-weight: bold;
 }
