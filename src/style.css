@@ -21,7 +21,7 @@ small {
 	background: #9ddcdc;
 }
 .temperature {
-	font-size: 45px;
+	font-size: 40px;
 }
 .unit {
 	position: relative;
@@ -60,7 +60,8 @@ small {
 	border: 2px solid #e67a7a;
 	border-radius: 25px;
 	color: #d45079;
-	background: #cff0f0;
+	background: #e5de9c;
+  box-shadow: 1px 2px 3px rgb(167, 166, 166);
 }
 .temperature2 {
 	font-size: 14px;
