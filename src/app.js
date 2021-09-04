@@ -81,7 +81,7 @@ function displayWeather(response) {
 	celsiusTemperature = response.data.main.temp;
 
 	temp.innerHTML = Math.round(celsiusTemperature);
-	cityElement.innerHTML = `${currentCity}`;
+	cityElement.innerHTML = response.data.name;
 	description.innerHTML = response.data.weather[0].main;
 	humidityElement.innerHTML = response.data.main.humidity;
 	windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -104,11 +104,13 @@ function search(city) {
 
 function handleSubmit(event) {
 	event.preventDefault();
-	let cityInputElemet = document.querySelector("#city-input").value;
-	search(cityInputElemet.value);
+	let cityInputElement = document.querySelector("#city-input");
+	search(cityInputElement.value);
 }
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
+searchForm.addEventListener("submit", handleSubmit);
+
+search("Tokyo");
 
 function searchPosition(position) {
 	let lat = position.coords.latitude;
@@ -152,6 +154,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let celsiusTemperature = null;
-
-
-search("Tokyo");
